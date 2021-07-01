@@ -1,7 +1,7 @@
 .page-header {
   background-color: $primary-white-color;
-  position: fixed;
-  top: 0;
+  // position: fixed;
+  // top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -11,6 +11,7 @@
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* Logo */
@@ -22,8 +23,8 @@
 .logo {
   display: flex;
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   color: $accent-color;
 
@@ -123,4 +124,62 @@
   &.portfolio {
     border-bottom: $page-header-portfolio-border;
   }
+}
+
+.mobile-nav {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  .container {
+    position: relative;
+    padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  }
+
+  .menu-close {
+     position: absolute;
+     right: 15px;
+     top: 21px;
+  }
+}
+
+.mobile-menu{
+}
+
+.mobile-menu__item {
+   margin-bottom: 36px;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+font-size: 40px;
+line-height: 47px;
+text-align: center;
+letter-spacing: 0.02em;
+text-decoration: none;
+}
+
+.mobile-contacts__link {
+  font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0.02em;
+text-decoration: none;
+color: #757575;
+}
+
+.mobile-media{
+  display: flex;
+}
+
+.mobile-nav.is-hidden {
+    opacity: 0;
+  pointer-events: none;
 }
